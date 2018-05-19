@@ -1,0 +1,16 @@
+{
+    "publisher": {
+        "name": "pub",
+        "address": "dcfgvb"
+    },
+    "author": [
+        {
+            "name": "ayush",
+            "address": "dxgchvb",
+            "info": "yoho"
+        }
+    ],
+    "title": "first",
+    "isbn": "4567",
+    "edition": 1
+}
