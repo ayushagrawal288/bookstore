@@ -8,12 +8,8 @@ from bookstore.models import Book
 class BookList(ListAPIView):
     serializer_class = BookSerializer
     queryset = Book.objects.all()
-
-    def get(self, request, *args, **kwargs):
-        data = self.list(request, *args, **kwargs)
-        import pdb
-        pdb.set_trace()
-        return data
+    filter_backends = (SearchFilter,)
+    search_fields = ('title', 'author__name', 'publisher__name')
 
 
 class BookCreate(CreateAPIView):
@@ -37,9 +33,9 @@ class BookDelete(DestroyAPIView):
     queryset = Book.objects.all()
     lookup_url_kwarg = 'id'
 
-
-class BookSearch(ListAPIView):
-    serializer_class = BookSerializer
-    queryset = Book.objects.all()
-    filter_backends = (SearchFilter,)
-    search_fields = ('title', 'author__name', 'publisher__name')
+#
+# class BookSearch(ListAPIView):
+#     serializer_class = BookSerializer
+#     queryset = Book.objects.all()
+#     filter_backends = (SearchFilter,)
+#     search_fields = ('title', 'author__name', 'publisher__name')
