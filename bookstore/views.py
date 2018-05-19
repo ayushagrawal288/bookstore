@@ -1,20 +1,19 @@
-# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from rest_framework.generics import ListAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView, CreateAPIView
-# from django.shortcuts import render
 from rest_framework.filters import SearchFilter
-# from django.utils.decorators import method_decorator
-# from django.contrib.auth.decorators import login_required
-from bookstore.serializers import BookSerializer, PublisherSerializer, AuthorSerializer
-from bookstore.models import Book, Author, Publisher
-from rest_framework import status
-from rest_framework.response import Response
-from django.core.exceptions import ObjectDoesNotExist
+from bookstore.serializers import BookSerializer
+from bookstore.models import Book
 
 
 class BookList(ListAPIView):
     serializer_class = BookSerializer
     queryset = Book.objects.all()
+
+    def get(self, request, *args, **kwargs):
+        data = self.list(request, *args, **kwargs)
+        import pdb
+        pdb.set_trace()
+        return data
 
 
 class BookCreate(CreateAPIView):

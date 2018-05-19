@@ -1,10 +1,5 @@
-# from datetime import datetime
-# from userSetup.models import UserInfo
-# from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from datetime import date
-# from django.contrib.postgres.fields import ArrayField
-# from rest_framework.serializers import ModelSerializer
 
 
 class Publisher(models.Model):
