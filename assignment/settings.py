@@ -27,11 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-# REST_FRAMEWORK = {
-#     'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
-# }
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -60,7 +55,7 @@ ROOT_URLCONF = 'assignment.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
