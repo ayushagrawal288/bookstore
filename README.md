@@ -27,3 +27,37 @@ Getting Started
 - Run your project.
 
     python manage.py runserver
+
+Endpoints
+---------
+Book:
+- List(get):
+    /book/list/
+    /book/list/?search=
+
+- Create(post):
+    /book/create/
+    body = {
+        "title": "",
+        "isbn": "",
+        "price": 0.0,
+        "author": ["", ""],
+        "publisher": "",
+        "edition": "",
+        "date_published": "2000-01-15"
+    }
+
+- Get Book(get):
+    /book/<id>/
+
+- Update(put):
+    /book/<id>/edit/
+    Must contain attr = title
+
+- Delete(delete):
+    /book/<id>/delete
+
+
+- Upload Csv(post):
+    /book/upload-csv/
+    Must contain attr = title, author, publisher
