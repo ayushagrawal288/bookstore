@@ -7,6 +7,8 @@ An online bookstore API. Following are the steps -
 - Develop endpoints to create, read, update, delete and search (generic search) books in the store.
 - Design an endpoint to upload books from CSV/excel file one by one or in bulk
 
+## Heroku link -> https://bookstore288.herokuapp.com/
+
 
 Getting Started
 ---------------

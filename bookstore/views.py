@@ -24,8 +24,8 @@ class BookCreate(CreateAPIView):
     serializer_class = BookSerializer
 
     def post(self, request, *args, **kwargs):
-        import pdb
-        pdb.set_trace()
+        # import pdb
+        # pdb.set_trace()
         publisher_data = request.data.pop('publisher', None)
         author_data = request.data.pop('author', [])
 

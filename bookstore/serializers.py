@@ -50,8 +50,8 @@ class BookSerializer(serializers.ModelSerializer):
         return instance
 
     def update(self, instance, validated_data):
-        import pdb
-        pdb.set_trace()
+        # import pdb
+        # pdb.set_trace()
         publisher_data = validated_data.pop('publisher', None)
         author_data = validated_data.pop('author', None)
 
